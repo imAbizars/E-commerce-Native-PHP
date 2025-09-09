@@ -1,3 +1,17 @@
+<?php
+$page = $_GET['dashboard']??'totalpenjualan';
+$allowedpages = ['totalpenjualan','datapesanan','databarang'];
+if(!in_array($page,$allowedpages)){
+    $page = 'totalpenjualan';
+}
+
+$pageTitles = [
+    'totalpenjualan' => 'Total Penjualan',
+    'datapesanan'=>'Data Pesanan',
+    'databarang'=>'Data Barang'
+]
+?>
+
 <div class="container">
     <aside class="sidebar">
         <nav class="sidebar-header">
