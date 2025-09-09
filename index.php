@@ -1,12 +1,12 @@
 <?php
 
 include './config/config.php';
-include './layouts/header.php';
 
 $routes = include './config/routes.php';
 $page = $_GET['page'] ?? 'home';
 $allowedPages = array_keys($routes);
 $nolayoutPages = ['login','register','dashboard'];
+include './layouts/header.php';
 
 if (!in_array($page, $nolayoutPages)) {
     include './layouts/navbar.php';
